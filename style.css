@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(20, 20, 20);
+    color: rgb(230, 230, 230);
+    font-size: 28px;
+}
+
+#kontener {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pytanie{
+    width: 1170px;
+    border: 5px solid lightgrey;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#obramuwkaPasjaPostepu {
+    width: 1180px;
+    border: 5px solid lightgrey;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+#pasekPostepu {
+    width: 0%;
+    height: 20px;
+    transition: value ease-in-out 1s;
+    border-radius: 8px;
+    background-color: chartreuse;
+    transition: width 1s ease-in-out;
+}
+
+#odpA, #odpB, #odpC, #odpD{
+    border: 5px solid lightgrey;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+    width: 570px;
+    float: left;
+    cursor: pointer;
+}
+
+#odpA:hover, #odpB:hover, #odpC:hover, #odpD:hover {
+    border: 5px solid white;
+    color: white;
+}
+
+#jeszczeRaz {
+    color: cornflowerblue;
+    border: 5px solid cornflowerblue;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+#jeszczeRaz:hover{
+    color: rgb(177, 203, 252);
+    border: 5px solid rgb(177, 203, 252);
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+#licznikPieniedzy, #czasPozostalyNaOdpowiedzenie{
+    border: 5px solid lightgrey;
+    margin: 5px;
+    padding: 5px;
+    width: 570px;
+    float: left;
+    border-radius: 15px;
+}
