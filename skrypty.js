@@ -35,7 +35,7 @@ var bazaOdpA = [
     "reguły potasowe",
     "kwietnia",
     "złodziejem drobiu",
-    "gameta żeńska",
+    "gamety żeńskiej",
     "łuku",
     "Iwanowi IV Groźnemu",
     "jedynka z czytania nut",
@@ -68,7 +68,7 @@ var bazaOdpB = [
     "Piotrowi I Wielkiemu",
     "na metalu",
     "drąg z twardego drewna",
-    "zmartwychwstanie Jezusa",
+    "Zmartwychwstanie Jezusa",
     "na akordeonie",
     "1 234 321",
     "z Oz",
@@ -97,7 +97,7 @@ var bazaOdpC = [
     "Aleksandrowi I Romanowowi",
     "na drewnie",
     "inaczej osioł dardanelski",
-    "śmierć Jezusa na krzyżu",
+    "Śmierć Jezusa na krzyżu",
     "na djembe",
     "111 111 111",
     "z Mordoru",
@@ -126,7 +126,7 @@ var bazaOdpD = [
     "Mikołajowi II Romanowowi",
     "na murze",
     "w slangu ogolona głowa",
-    "zesłanie Ducha Świętego",
+    "Zesłanie Ducha Świętego",
     "na ksylofonie",
     "123 454 321",
     "z Cimmerii",
@@ -256,7 +256,8 @@ function nastepnaRunda(literkaOdpowidzi, porawnaOdpowidz) {
 
         clearInterval(licznikCzasInterval);
     }
-    else if (literkaOdpowidzi == porawnaOdpowidz) {
+
+    if (literkaOdpowidzi == porawnaOdpowidz && numerRundy <= 10) {
         document.getElementById("odp" + literkaOdpowidzi).style.color = "rgb(0, 255, 42)";
         document.getElementById("odp" + literkaOdpowidzi).style.borderColor = "rgb(0, 255, 42)";
 
@@ -276,7 +277,8 @@ function nastepnaRunda(literkaOdpowidzi, porawnaOdpowidz) {
 
         clearInterval(licznikCzasInterval);
     }
-    else {
+
+    if(literkaOdpowidzi != porawnaOdpowidz && numerRundy <= 11) {
         document.getElementById("odp" + porawnaOdpowidz).style.color = "rgb(0, 255, 42)";
         document.getElementById("odp" + porawnaOdpowidz).style.borderColor = "rgb(0, 255, 42)";
 
@@ -294,7 +296,7 @@ function nastepnaRunda(literkaOdpowidzi, porawnaOdpowidz) {
         document.getElementById("odpD").setAttribute('onclick', ';');
 
         setTimeout(() => {
-            document.getElementById("kontener").innerHTML = "Brawo udało ci się wygrać " + (numerRundy - 1) * 100000 + " zł" +
+            document.getElementById("kontener").innerHTML = "Brawo udało ci się wygrać " + (numerRundy - 2) * 100000 + " zł" +
                 '<br> <div id="jeszczeRaz" onclick="location.reload();">Zagraj jeszcze raz!</div>';
             document.getElementById("kontener").style.textAlign = "center";
         }, 1000);
