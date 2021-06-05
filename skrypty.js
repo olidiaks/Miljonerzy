@@ -39,7 +39,7 @@ var bazaOdpA = [
     "łuku",
     "Iwanowi IV Groźnemu",
     "jedynka z czytania nut",
-    "wniebowzięcie Matki Bożej",
+    "Wniebowzięcie Matki Bożej",
     "na kornecie",
     "12 321",
     "z Rivii",
@@ -137,7 +137,7 @@ var bazaOdpD = [
     "Jacques-Louis David",
     "gruszy",
     '"Arab"',
-    "Nazwy planet w ukałdzie Alfa Centauri",
+    "Nazwy planet w układzie Alfa Centauri",
     "Czas",
     "Czynele",
     "królik"
@@ -228,14 +228,14 @@ function uaktualnieniePytania(nrPytania) {
 
     document.getElementById("pasekPostepu").style.width = nrPytania * 10 + "%";
 
-    document.getElementById("czasPozostalyNaOdpowiedzenie").innerHTML = "Czas pozostały na udzielenie odpowidzi: 20s";
+    document.getElementById("czasPozostalyNaOdpowiedzenie").innerHTML = "Czas pozostały na udzielenie odpowiedzi: 20s";
 
     licznikCzasInterval = setInterval(() => {
         i--;
-        document.getElementById("czasPozostalyNaOdpowiedzenie").innerHTML = "Czas pozostały na udzielenie odpowidzi: " + i + "s";
+        document.getElementById("czasPozostalyNaOdpowiedzenie").innerHTML = "Czas pozostały na udzielenie odpowiedzi: " + i + "s";
         if (i == 0) {
-            document.getElementById("kontener").innerHTML = "Niestety czas na udzielenie odpowidzi minoł. 😢 Udało ci się wygrać " + (nrPytania - 1) * 100000 + "zł." +
-                '<br> <div id="jeszczeRaz" onclick="location.reload();">Zagraj jescze raz!</div>';
+            document.getElementById("kontener").innerHTML = "Niestety czas na udzielenie odpowidzi minął. 😢 Udało ci się wygrać " + (nrPytania - 1) * 100000 + "zł." +
+                '<br> <div id="jeszczeRaz" onclick="location.reload();">Zagraj jeszcze raz!</div>';
             document.getElementById("kontener").style.textAlign = "center";
             clearInterval(licznikCzasInterval);
         }
@@ -251,7 +251,7 @@ function nastepnaRunda(literkaOdpowidzi, porawnaOdpowidz) {
 
     if (numerRundy > 10 && literkaOdpowidzi == porawnaOdpowidz) {
         document.getElementById("kontener").innerHTML = "Brawo udało ci się wygrać 1 000 000 zł" +
-            '<br> <span id="jeszczeRaz" onclick="location.reload();">Zagraj jescze raz!</span>';
+            '<br> <span id="jeszczeRaz" onclick="location.reload();">Zagraj jeszcze raz!</span>';
         document.getElementById("kontener").style.textAlign = "center";
 
         clearInterval(licznikCzasInterval);
@@ -295,7 +295,7 @@ function nastepnaRunda(literkaOdpowidzi, porawnaOdpowidz) {
 
         setTimeout(() => {
             document.getElementById("kontener").innerHTML = "Brawo udało ci się wygrać " + (numerRundy - 1) * 100000 + " zł" +
-                '<br> <div id="jeszczeRaz" onclick="location.reload();">Zagraj jescze raz!</div>';
+                '<br> <div id="jeszczeRaz" onclick="location.reload();">Zagraj jeszcze raz!</div>';
             document.getElementById("kontener").style.textAlign = "center";
         }, 1000);
 
@@ -304,7 +304,7 @@ function nastepnaRunda(literkaOdpowidzi, porawnaOdpowidz) {
 }
 
 document.getElementById("pytanie").addEventListener("click", () => {
-    document.getElementById("kontener").innerHTML = "I co chciałeś skopiwać to pytania i znaleźć na nie odpiowidzi w DuckDuckGo. Nie ma tak" +
-        '<br> <div id="jeszczeRaz" onclick="location.reload();">Masz jeszcze jedna szansę dobrze ją wykożystaj.</div>';
+    document.getElementById("kontener").innerHTML = "I co chciałeś skopiwać to pytanie i znaleźć na nie odpowiedź w DuckDuckGo. Nie ma tak." +
+        '<br> <div id="jeszczeRaz" onclick="location.reload();">Masz jeszcze jedna szansę dobrze ją wykorzystaj.</div>';
     document.getElementById("kontener").style.textAlign = "center";
 });
